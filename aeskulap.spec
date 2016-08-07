@@ -81,10 +81,10 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_datadir}/appdata/%{name}
 rm -rf $RPM_BUILD_ROOT
 
 %pre
-%gconf_schema_prepare %{name}
+#%%gconf_schema_prepare %{name}
 
 %post
-%gconf_schema_upgrade %{name}
+#%%gconf_schema_upgrade %{name}
 %update_icon_cache hicolor
 %update_desktop_database
 
